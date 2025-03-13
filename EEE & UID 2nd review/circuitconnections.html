@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Street Lighting System</title>
+    <style>
+        body {
+            font-family: 'Arial';
+            background: linear-gradient(to right, #164B60, #1E90FF);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+        
+       
+        
+        table {
+            width: 60%;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        th, td {
+            padding: 12px;
+            border: 2px solid #164B60;
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        th {
+            background-color: #164B60;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tr:hover {
+            background-color: #d1e7fd;
+            
+        }
+        
+        .button-container {
+            margin-top: 20px;
+        }
+        
+        .menu {
+            
+            background-color: #FFA500;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            
+        }
+        
+        .menu:hover {
+            background-color: #FF4500;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>CIRCUIT CONNECTIONS</h1>
+    
+    
+    <table border="6px">
+        <tr>
+            <th>Component</th>
+            <th>Connected To</th>
+            <th>Connection</th>
+            <th>Reason</th>
+        </tr>
+
+        <tr>
+            <td rowspan="3">PIR-SESNOR</td>
+            <td>ESP-32</td>
+            <td>VCC → 3.3V</td>
+            <td>Powers the PIR sensor to detect motion.</td>
+        </tr>
+        <tr>
+            <td>ESP-32</td>
+            <td>GND → GND</td>
+            <td>Provides a common ground reference.</td>
+        </tr>
+        <tr>
+            <td>ESP-32</td>
+            <td>OUT → D4</td>
+            <td>Sends a HIGH signal to ESP8266 when motion is detected.</td> 
+        </tr>
+
+        
+
+        <tr>
+            <td rowspan="3">IR-SESNOR</td>
+            <td>ESP-32</td>
+            <td>VCC → 5V</td>
+            <td>Powers the IR sensor for detecting objects.</td>
+        </tr>
+        <tr>
+            <td>ESP-32</td>
+            <td>GND → GND</td>
+            <td>Provides a common ground reference.</td>
+        </tr>
+        <tr>
+            <td>ESP-32</td>
+            <td>DAT → D5</td>
+            <td>Sends a signal to ESP-32 when an object is detected.</td> 
+        </tr>
+
+        
+
+        <tr>
+            <td rowspan="2">LED</td>
+            <td>ESP-32</td>
+            <td>POSITIVE (ANODE) → D18</td>
+            <td>The ESP-32 controls the LED by providing voltage to turn it ON.</td>
+        </tr>
+        <tr>
+            <td>ESP-32</td>
+            <td>NEGATIVE (CATHODE) →330Ω resistor → GND</td>
+            <td>The resistor limits the current to prevent LED damage.</td>
+        </tr>
+        
+        
+
+
+    </table>
+    
+    <div class="button-container">
+        <a class="menu" href="project.html">Menu</a>
+    </div>
+</body>
+</html>

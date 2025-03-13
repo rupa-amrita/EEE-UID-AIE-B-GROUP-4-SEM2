@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    
+    <style>
+        body {
+            font-family: 'Arial';
+            color: #333;
+            background-color: #f8f9fa;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            background-color: #FF9D23;
+        }
+        .container {
+            width: 80%;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 100px auto;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border: 4px solid brown;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #0056b3;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #444;
+            text-align: justify;
+            margin: 20px;
+        }
+        .menu {
+            background-color: #164B60;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .button-container a {
+            width: 150px;
+            height: 60px;
+            border: 3px solid #315cfd;
+            border-radius: 45px;
+            background: white;
+            font-size: 24px;
+            font-weight: 550;
+            color: black;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .button-container a:hover {
+            background: #B03052;
+            color: white;
+            font-size: 30px;
+        }
+        ul li{
+            font-size: 20px;
+        }
+        h3{
+            font-size: 25px;
+        }
+        h5{
+            font-size: 23px;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">methodology:</h1>
+        
+        <ul>
+            <li>The system operates by continuously monitoring the PIR and IR sensors for any detection events.</li>
+            <li>When motion or an obstacle is detected, the corresponding sensor outputs a HIGH signal.</li>
+            <li> The ESP32 reads these signals and responds by turning ON the LED to simulate a street light. 
+            </li>
+            <li>The LED remains ON for at least 5 seconds (Light Delay). 
+            </li>
+            <li>If no further detection occurs during this period, the LED is turned OFF. 
+            </li>
+        </ul>
+        <br>
+        <h5>Software Architecture:</h5>
+        <ul>
+            <li>Code is written in Arduino IDE</li>
+            <li>Uses digitalRead() for sensors and digitalWrite() for controlling the LED.</li>
+            <li>Implements a millis() function to keep the LED ON for a set duration after motion detection.</li>
+        </ul>
+        <br>
+        <h3>Integration with AI</h3>
+        <ul>
+            <li>Using AI model for two key tasks:
+            </li>
+            <ol order="1" type="1">
+                <li><b>Traffic Forecasting</b>: Predict vehicle and pedestrian density using historical and real-time data using Models like LSTM.
+                </li>
+                <li>
+                    <b>Weather based Forecasting:</b> Predict fog, rain, or clear skies to adjust brightness accordingly
+                </li>
+
+            </ol>
+        </ul>
+        <h3>Steps For AI Assistance:</h3>
+        <ul>
+            <li>For to just see how it is going to work , we have taken a dataset consisting of both weather and traffic information , with total of 9 features  and started training the model using Torch Module.
+</li>
+<li>After Training it we evaluated and the result that we have got are with too minimal loss indicating that our model is learning the relationship between traffic, weather, and motion and making fairly accurate predictions
+</li>
+        </ul>
+        <img style="width:50%;height:50%" src="loss.png">
+        <img style="width:50%;height:50%" src="results.png">
+
+
+       
+</div>
+
+<div class="button-container">
+<a href="project.html">Menu</a>
+</div>
+
+ 
+      
+</body>
+</html>

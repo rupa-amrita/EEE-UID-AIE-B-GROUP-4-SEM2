@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Arial';
+            color: #333;
+            background-color: #f8f9fa;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            background-color: #FF9D23;
+        }
+        .container {
+            width: 80%;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 100px auto;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border: 4px solid brown;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #0056b3;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #444;
+            text-align: justify;
+            margin: 20px;
+        }
+        .menu {
+            background-color: #164B60;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .button-container a {
+            width: 150px;
+            height: 60px;
+            border: 3px solid #315cfd;
+            border-radius: 45px;
+            background: white;
+            font-size: 24px;
+            font-weight: 550;
+            color: black;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .button-container a:hover {
+            background: #B03052;
+            color: white;
+            font-size: 30px;
+        }
+        ul li{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Limitations:</h1>
+        
+        <ul>
+            <li>The code is getting complied and it is getting uploaded into the ESP32 but we are not getting the output.
+            </li>
+            <li>We are not using LDR sensor, but using it might give better results.</li>
+            <li>PIR sensors works better at 5v power supply but we are using 3.3v since we are working with ESP32 . 
+            </li>
+        </ul>
+        
+        
+    </div>
+    <div class="button-container">
+        <a href="project.html">Menu</a>
+    </div>
+</body>
+</html>

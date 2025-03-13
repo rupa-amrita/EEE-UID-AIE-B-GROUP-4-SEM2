@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <title>Automatic Street Lighting System using AI and IOT</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            
+        }
+        
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 50px;
+            
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button-container a {
+            width: 160px;
+            height: 55px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-container a:hover {
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .dark-mode .button-container a {
+            background: linear-gradient(135deg, #444, #111);
+        }
+
+        .dark-mode .button-container a:hover {
+            background: linear-gradient(135deg, #b03052, #ff4b2b);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img style="width:50%" src="logo.png">
+        <h1>Automatic Street Lighting System using AI and IoT</h1>
+        <p>Explore different sections of our project by clicking the buttons below.</p>
+        <br>
+        <div class="button-container">
+            <a href="index.html">Index</a>
+            <a href="introduction.html">Introduction</a>
+            <a href="objective.html">Objective</a>
+            <a href="methodology.html">Methodology</a> 
+            <a href="circuitconnections.html">Circuit connections</a>
+            <a href="circuitdiagram.html">Circuit diagram</a>
+            <a href="advantages.html">Advantages</a>
+            <a href="limitations.html">Limitations</a>
+            <a href="futurework.html">Future work</a>
+            <a href="timeline.html">Timeline</a>
+            
+        </div>
+        <button onclick="toggleDarkMode()" style="position: absolute; top: 20px; right: 20px; padding: 10px 20px; cursor: pointer; border-radius: 20px; background: #444; color: white; font-size: 20px; ">
+            Toggle Dark Mode
+        </button>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
