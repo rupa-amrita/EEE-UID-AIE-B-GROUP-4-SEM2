@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: 'Orbitron';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 40px 30px;
+      width: 420px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 255, 255, 0.2);
+    }
+
+    
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #00e5ff;
+      text-shadow: 0 0 5px #00e5ff, 0 0 15px #00e5ff;
+    }
+
+    label {
+      display:block;
+      font-size: 16px;
+      margin-bottom: 8px;
+      text-align: left;
+      color: #b2ebf2;
+    }
+
+    .custom-select {
+      position: relative;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    select {
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 16px;
+      border: none;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      backdrop-filter: blur(4px);
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(0, 255, 255, 0.2);
+    }
+
+    select:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #00e5ff, #1de9b6);
+      color: #000;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00e5ff, 0 0 20px #1de9b6;
+    }
+
+    button:hover {
+      box-shadow: 0 0 15px #00e5ff, 0 0 25px #1de9b6;
+    }
+
+       
+    
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2 >🚀 Launch Your Portal</h2>
+
+  <label for="username">🧑 Username</label>
+  <div class="custom-select">
+    <select id="username">
+      <option value="">-- Choose Username --</option>
+      <option value="Vignesh">Vignesh</option>
+      <option value="Rupa">Rupa</option>
+      <option value="Dharani">Dharani</option>
+      <option value="Varalakshmi">Varalakshmi</option>
+    </select>
+  </div>
+
+  <label for="section">📂 Section</label>
+  <div class="custom-select">
+    <select id="section">
+      <option value="">-- Choose Section --</option>
+      <option value="Index">☰Index</option>
+      <option value="Introduction">✨Introduction</option>
+      <option value="Objective">🎯Objective</option>
+      <option value="Literature review">📚Literature review</option>
+      <option value="Advantages">💡Advantages</option>
+      <option value="Disadvantages">❌Disadvantages</option>
+      <option value="Methodology">📝Methodology</option>
+      <option value="Results">📈Results</option>
+      <option value="Futurescope">🌐Futurescope</option>
+      
+
+
+    </select>
+  </div>
+
+  <button onclick="handleSubmit()">🚨 Submit</button>
+<script>
+  function handleSubmit() {
+  const username = document.getElementById("username").value;
+  const section = document.getElementById("section").value;
+
+  const validUsers = ["Vignesh", "Rupa", "Dharani", "Varalakshmi"];
+
+  if (!validUsers.includes(username)) {
+    alert("⚠️ Please select a valid username.");
+    return;
+  }
+
+  switch (section) {
+    case "Index":
+      window.open("index.html", "_blank");
+      break;
+    case "Introduction":
+      window.open("introduction.html", "_blank");
+      break;
+    case "Objective":
+      window.open("objective.html", "_blank");
+      break;
+    case "Advantages":
+      window.open("advantages.html", "_blank");
+      break;
+    case "Disadvantages":
+      window.open("disadvantages.html", "_blank");
+      break;
+    case "Methodology":
+      window.open("methodology.html", "_blank");
+      break;
+    case "Literature review":
+    window.open("literaturereview.html", "_blank");
+    break;
+    case "Results":
+    window.open("results.html", "_blank");
+    break;
+    case "Futurescope":
+    window.open("futurescope.html", "_blank");
+    break;
+    default:
+      alert("📌 Please select a valid section.");
+  }
+}
+</script>
+
+</body>
+</html>

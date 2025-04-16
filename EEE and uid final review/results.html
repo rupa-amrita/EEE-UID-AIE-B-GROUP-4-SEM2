@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Results</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content {
+      text-align: center;
+      padding: 40px;
+    }
+
+    h2 {
+      font-size: 48px;
+      margin-bottom: 30px;
+      color: #00e5ff;
+      text-shadow: 2px 2px 10px rgba(0, 255, 255, 0.4);
+    }
+
+    ul {
+      font-size: 22px;
+      max-width: 950px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px 40px;
+      border-radius: 15px;
+      line-height: 1.8;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      text-align: left;
+    }
+
+    .menu-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #00e5ff;
+      color: #0f2027;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
+    }
+
+    .menu-button:hover {
+      background: #00c9e0;
+      color: white;
+      box-shadow: 0 0 20px rgba(0, 229, 255, 1);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="project.html" class="menu-button">⬅ Home</a>
+
+  <div class="content">
+    <h2>Methodology</h2>
+    <ul>
+      <li>Detects objects using 3 IR sensors.</li>
+      <li>Turns on corresponding LEDs when objects are detected.</li>
+      <li>Brightness of LEDs can be set via Serial input (0–255).
+    </li>
+    <li>LDR reads light level (not actively used but can be integrated for light-based control). </li>
+    <li>Users can reset brightness values by typing "reset" or "clear". </li>
+    <li>
+        Default brightness is 255 if no user input is given.</li>
+    </ul>
+  </div>
+
+</body>
+</html>
